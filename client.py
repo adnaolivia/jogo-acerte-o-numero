@@ -3,7 +3,7 @@ import Pyro4
 def main():
     # Localizando o servidor de nomes e obtendo o URI do objeto remoto
     ns = Pyro4.locateNS()
-    uri = ns.lookup("example.calculator")
+    uri = ns.lookup("example.calculator1")
     calculator = Pyro4.Proxy(uri)  # Cria um proxy para o objeto remoto
 
     # Usando os métodos remotos
@@ -12,3 +12,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    # PYRO:Pyro.NameServer@10.25.2.66:9090

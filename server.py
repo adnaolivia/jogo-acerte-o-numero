@@ -14,7 +14,7 @@ def main():
     daemon = Pyro4.Daemon()  # Cria um daemon Pyro
     ns = Pyro4.locateNS()    # Localiza o servidor de nomes
     uri = daemon.register(Calculator)  # Registra o objeto remoto
-    ns.register("example.calculator", uri)  # Registra o objeto no servidor de nomes
+    ns.register("example.calculator1", uri)  # Registra o objeto no servidor de nomes
     print("Servidor está pronto.")
     daemon.requestLoop()  # Mantém o servidor rodando
 
