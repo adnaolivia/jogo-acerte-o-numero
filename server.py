@@ -16,6 +16,9 @@ def main():
     uri = daemon.register(Calculator)  # Registra o objeto remoto
     ns.register("example.calculator1", uri)  # Registra o objeto no servidor de nomes
     print("Servidor está pronto.")
+    print(daemon)
+    print(ns)
+    print(uri)
     daemon.requestLoop()  # Mantém o servidor rodando
 
 if __name__ == "__main__":

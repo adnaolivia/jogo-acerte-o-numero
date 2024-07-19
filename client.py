@@ -13,4 +13,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-    # PYRO:Pyro.NameServer@10.25.2.66:9090
+# PYRO:obj_675b7fe49c5d4069ab4858b3c113fc9e@localhost:50363
