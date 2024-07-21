@@ -1,6 +1,5 @@
 import Pyro4
 
-# Definindo um objeto remoto
 @Pyro4.expose
 class Calculator(object):
     def add(self, x, y):
@@ -11,13 +10,11 @@ class Calculator(object):
 
 # Inicializando o daemon Pyro4
 def main():
+    # ip_address = "ip_aqui"
+    # port = 00000
     daemon = Pyro4.Daemon()  # Cria um daemon Pyro
-    ns = Pyro4.locateNS()    # Localiza o servidor de nomes
     uri = daemon.register(Calculator)  # Registra o objeto remoto
-    ns.register("example.calculator1", uri)  # Registra o objeto no servidor de nomes
     print("Servidor está pronto.")
-    print(daemon)
-    print(ns)
     print(uri)
     daemon.requestLoop()  # Mantém o servidor rodando
 
