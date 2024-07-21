@@ -7,7 +7,7 @@ class AdivinheoNumero(object):
         self.novo_jogo()
     
     def novo_jogo(self):
-        self.numero_sorteado = random.randint(1, 10) # sorteia aleatoriamente um inteiro entre 1 e 100
+        self.numero_sorteado = random.randint(1, 100) # sorteia aleatoriamente um inteiro entre 1 e 100
         self.tentativas = 0 # inicia em 0, depois vai iterando ate acertar
     
     def sugestao(self, numero):
